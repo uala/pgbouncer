@@ -111,7 +111,7 @@ ${TCP_KEEPINTVL:+tcp_keepintvl = ${TCP_KEEPINTVL}\n}\
 " > ${PG_CONFIG_DIR}/pgbouncer.ini
 fi
 
-adduser ${PG_USER}
+adduser --disabled-password ${PG_USER}
 mkdir -p ${PG_LOG}
 chmod -R 755 ${PG_LOG}
 chown -R ${PG_USER}:${PG_USER} ${PG_LOG}
